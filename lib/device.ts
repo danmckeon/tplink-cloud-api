@@ -137,7 +137,7 @@ export default class TPLinkDevice {
       }
     };
 
-    const response = await axios(request);
+    const response = await axios(request as any);
     checkError(response);
 
     // eg: {"error_code":0,"result":{"responseData":"{\"smartlife.iot.smartbulb.lightingservice\":{\"get_light_state\":{\"on_off\":0,\"dft_on_state\":{\"mode\":\"normal\",\"hue\":0,\"saturation\":0,\"color_temp\":2700,\"brightness\":10},\"err_code\":0}}}"}}

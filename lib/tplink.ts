@@ -92,7 +92,7 @@ export async function login(
     }
   };
 
-  const response = await axios(request);
+  const response = await axios(request as any);
   checkError(response);
   const token = response.data.result.token;
   return new TPLink(token, termid);
@@ -135,7 +135,7 @@ export default class TPLink {
       data: { method: "getDeviceList" }
     };
 
-    const response = await axios(request);
+    const response = await axios(request as any);
     checkError(response);
     return (this.deviceList = response.data.result.deviceList);
   }
