@@ -1,4 +1,5 @@
-/distribution
+# Commented out /distribution in order to use module loaded from github
+# /distribution
 
 # Logs
 logs
